@@ -1,0 +1,26 @@
+\documentclass[12pt, a4paper,twoside]{article}
+
+\begin{document}
+\label{sec:introduction}
+With the advancement of modern technology, billions of images have been uploaded or shared online. To find an image containing a particular object or partially 
+similar objects is like finding a needle in a haystack. This has attracted great attention especially in the field of large scale visual search. The main objective of such algorithms is to retrieve the most relevant visual content from 
+datasets consisting of corpuses size which even exceeds the main memory capacity of a single machine, in a very accurate and efficient way.
+There are existing algorithms like the nearest neighbor search and tree-based techniques but they are only for low dimensionality data search and are 
+not scalable to higher dimensional data. These methods can be very expensive computationally and with regards to hardware requirements.
+
+In order to speed up the similarity computation and save storage space in memory hashing algorithms play a vital role. The main objective of a 
+hash function is to map each visual object into a binary feature vector, these binary feature vectors are low dimensional as compared to previous 
+high dimensional objects. This approach makes sure that the visually similar objects are mapped with the similar binary vectors.
+
+Currently two kinds of hashing methods are used in the industry: data-independent and data-dependent. In data-independent algorithms, random 
+projections are used to map samples and then binarization is performed. For the second category, various statistical learning techniques are used to learn hashing functions to map samples into binary code.
+
+In this project, I have been planning to use a deep hashing method \cite{DeepHashing} to learn compact binary codes for scalable image search which uses a deep neural network to seek multiple hierarchical non-linear transformations to learn compact binary codes. The main motives of which are:
+1) the loss between the compact real-valued code and the learned binary vector is minimized, 2) the binary codes distribute evenly on
+each bit, and 3) different bits are as independent as possible. But before generating the binary codes for different images we must ensure that 
+our images are properly aligned.
+Alignment of different images can be done by training a new convolutional neural network for estimating parameters of a geometric transformations 
+between two input images.
+
+\end{document}
+ 

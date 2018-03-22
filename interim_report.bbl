@@ -1,8 +1,8 @@
 \begin{thebibliography}{10}
 
 \bibitem{DeepHashing}
-V.~E. Liong, J.~Zhou, and J.~Lu, ``Deep hashing for scalable image search,''
-  {\em IEEE TRANSACTIONS ON IMAGE PROCESSING}, vol.~26, May. 2017.
+J.~Li, B.~Zhang, G.~Lu, and D.~Zhang, ``Dual asymmetric deep hashing
+  learning,'' {\em IEEE TRANSACTIONS}, 2018.
 
 \bibitem{LSH}
 A.~Andoni and P.~Indyk, ``Near-optimal hashing algorithms for approximate
@@ -15,10 +15,6 @@ J.~Ji, J.~Li, S.~Yan, B.~Zhang, and Q.~Tian, ``Super-bit locality-sensitive
 \bibitem{81}
 Y.~Weiss, A.~Torralba, and R.~Fergus, ``Spectral hashing,'' {\em in Proc.
   NIPS}, 2008.
-
-\bibitem{align}
-Y.~Weiss, A.~Torralba, and R.~Fergus, ``Convolutional neural network
-  architecture for geometric matching,'' {\em in CVPR 2017}, Apr. 2017.
 
 \bibitem{34}
 Q.~V. Le, W.~Y. Zou, S.~Y. Yeung, and A.~Y. Ng, ``Learning hierarchical
@@ -50,13 +46,5 @@ M.~Rubinstein, A.~Joulin, J.~Kopf, and C.~Liu., ``Unsupervised joint object
 \bibitem{33AA}
 A.~Krizhevsky, I.~Sutskever, and G.~E. Hinton, ``Imagenet classification with
   deep convolutional neural networks,'' {\em In NIPS}, 2012.
-
-\bibitem{34b}
-Y.~Lamdan, J.~T. Schwartz, and H.~J. Wolfson, ``Object recognition by affine
-  invariant matching,'' {\em In Proc. CVPR}, 1998.
-
-\bibitem{48b}
-K.~Simonyan and A.~Zisserman, ``Very deep convolutional networks for
-  large-scale image recognition,'' {\em In Proc. ICLR}, 2015.
 
 \end{thebibliography}

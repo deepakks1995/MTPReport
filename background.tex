@@ -2,7 +2,7 @@
 
 \begin{document}
 \label{sec:Background}
-In this section, we briefly review three related topics: 1) Large scalable image search, 2) Image Alignment and 3)Deep Learning.
+In this section, we briefly review three related topics: 1) Large scalable image search, 2)Deep Learning.
 \begin{itemize}
 	\item Scalable Image Search
 
@@ -13,26 +13,6 @@ In this section, we briefly review three related topics: 1) Large scalable image
 	image retreival, image matching, face recognition.As discussed earlier, hashing based methods can be generally classified into: data-independent and data-
 	dependent. The most representative method for Data-independent can be LSH , LSH preserves the cosine similarity of samples by using random projections obtained from Gaussian distributions	to map samples into binary features \cite{LSH}. In recent years LSH has been extended like  \cite{unbiased} proposed an unbiased
 	similarity estimation method by performing orthogonal random projections in a batch manner. For existing data-dependent hashing methods can be a good example. Weiss et al. \cite{81} presented a spectral hashing method to obtain balanced binary codes by solving a spectral graph partitioning problem.  
-
-\end{itemize}
-\begin{itemize}
-	\item Image Alignment
-
-	\begin{figure}[htbp]
-\centering
-  \includegraphics[scale=0.5]{images/Alignment}
-  \caption{Trained geometry should
-align two images with substantial appearance differences
-}\label{fig:figure1}
-\end{figure}      
-
-	Recently, convolutional neural networks have been used to learn powerful feature descriptors which are more robust
-	to appearance changes than the classical descriptors. However, these works still divide the image into
-	a set of local patches and extract a descriptor individually from each patch. Extracted descriptors are then compared
-	with an appropriate distance measure, by directly outputting a similarity score, or even by directly
-	outputting a binary matching/non-matching decision. The paper which I am following had a different approach \cite{align}, treating the
-	image as a whole, instead of a set of patches. Their approach has the advantage of capturing the interaction of the different
-	parts of the image in a greater extent, which is not possible when the image is divided into a set of local regions
 
 \end{itemize}
 \begin{itemize}

@@ -1,0 +1,89 @@
+\input{thesis_format}
+%\usepackage[a4paper, dvips, breaklinks, colorlinks=true, linkcolor=blue, citecolor=red, linktocpage=true]{hyperref}
+\begin{document}
+%--------------------------------------------------------------------------
+% ORDER OF THESIS CONTENTS SUGGESTED BY THE INSTITUTE.
+%- - - - - - - - - - - - - - - - - - - - - - - - - - -
+% cover page
+% inside cover page
+% Quotations (if any)
+% dedication page
+% certificate
+% acknowledgements
+% abstract
+% table of contents
+% list of tables
+% list of figures
+% glossary (if any)
+% abbreviations
+% notation
+% chapters
+% appendices
+% references 
+% list of papers based on thesis
+% curriculum Vitae    ->   (Only while submitting A5 copy, finally)
+% Doctoral committee  ->   (Only while submitting A5 copy, finally)
+%--------------------------------------------------------------------------
+% TO GET BOLDFACE GREEK LETTERS IN THE MAIN TEXT USE:
+% ${\boldmath \mbox{$\Xi$}} $
+%--------------------------------------------------------------------------
+
+%\renewcommand{\baselinestretch}{1.5}
+	%\input{dedicate.tex}    % DEDICATION PAGE
+	% \regularpage
+	% \specialpage
+
+  \input{01_titlePage}					% Title page
+  \input{02_certificate_of_approval}			% Certificate of approval
+  \input{03_certificate_by_supervisor}			% Certificate by supervisor
+  \input{04_declaration}				% Declaration
+ \pagestyle{plain}					
+%  \addcontentsline{toc}{chapter}{Thesis Certificate}
+        \pagenumbering{roman} \setcounter{page}{1}
+        \input{05_acknowledgement}			% Acknowledgement
+      
+       \addcontentsline{toc}{chapter}{Abstract}		
+        \input{Abstract/abstract.tex}			% ABSTRACT OF THE THESIS
+
+         \tableofcontents        			% TABLE OF CONTENTS
+         \newpage 
+	 \addcontentsline{toc}{chapter}{Abbreviations}
+	 \include{07_abbreviation} 			% ABBREVIATIONS
+	 
+         \newpage 
+	 \addcontentsline{toc}{chapter}{List of Symbols}
+	 \include{08_list_of_symbols} 			% SYMBOLS
+	 
+         \newpage 
+	 \addcontentsline{toc}{chapter}{List of Tables}
+	 \listoftables           			% LIST OF TABLES
+
+	\newpage 
+        \addcontentsline{toc}{chapter}{List of Figures}
+	\listoffigures          			% LIST OF FIGURES
+
+	\pagenumbering{arabic} \setcounter{page}{1}
+        \include{Chapter1/chapter1}  % Introduction to work  
+	\include{Chapter2/chapter2}  % Review of the problem or Background and related work
+	\include{Chapter3/chapter3}  % Work done  
+        \include{Chapter4/chapter4}  % Exerimental studies and results   
+ 	\include{Chapter5/chapter5}  % Conclusion and Future Work   
+%% APPENDICES FOLLOW.
+\appendix
+%        \include{AppendixA/appendixA} % APPENDIX-A
+%        \include{AppendixB/appendixB} % APPENDIX-B
+
+\renewcommand{\baselinestretch}{1.3}
+\begin{small}
+\addcontentsline{toc}{chapter}{References}
+\renewcommand{\bibname}{References}
+ \bibliographystyle{IEEEtran}
+        {\normalsize
+                \bibliography{./references/references.bib} % REFERENCES
+        }
+\end{small}
+%% Curriculum Vitae   -> 
+% 	\include{CV}       		% Curriculum Vitae
+
+\end{document}
+

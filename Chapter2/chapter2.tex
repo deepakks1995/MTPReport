@@ -1,0 +1,32 @@
+\chapter{Background and Related Work}
+\label{chapter2}
+In this section, we briefly review two related topics: 1) Large scalable image search, 2)Deep Learning.
+\section{Scalable Image Search}
+	With the increase in graphic data, need for efficient nearest neighbor search algorithms has arisen. Quantization base and tree-based are the two types of methods that exists today. Many hashing algorithms has been proposed these days with excellent result in the reduction of storage overheads and even in time-complexities. Quantizations based method provide high search accuracy gains while hashing based methods provide fast image retrieval. Currently many computer vision applications are using hashing based methods such as object recognition, image retrieval, image matching, face recognition. As discussed earlier, hashing based methods can be generally classified into: data-independent and data-dependent. The most representative method for Data-independent can be LSH , LSH uses random projections obtained from Gaussian distributions to preserve the cosine similarity of samples and finally maps them to binary features \cite{andoni2006near}. In recent years LSH has been extended, like  \cite{Ji2012SuperBitLH} proposed an unbiased similarity estimation method by performing orthogonal random projections in a batch manner. For existing data-dependent hashing methods can be a good example. Weiss et al. \cite{890d94598fa54dac85eae9aa824a0a7e} presented a spectral hashing method to obtain balanced binary codes by solving a spectral graph partitioning problem.  
+
+\section{Deep Learning}
+	Deep learning aims to build high-level features from raw data to learn hierarchical feature representations. In recent years, Deep learning use has been extended in computer vision and machine learning and has given a variety of algorithms which are used for image classification, object detection, action recognition, face verification. Representative deep  learning methods include deep stacked auto-encoder \cite{Le2011LearningHI}, deep convolutional neural networks \cite{28}, and deep belief network \cite{Hinton504}. Deep learning has achieved great success in various visual applications including scalable image search. To my knowledge, Semantic hashing \cite{Salakhutdinov2009SemanticH} is the first work on using deep learning techniques to learn hashing functions for scalable image search. They applied the stacked Restricted Boltzmann Machine (RBM) learn compact binary codes for document search. However, their model is complex and requires pre training, which is not efficient for practical applications.
+
+\section{Sensor Interoperability}
+Automatically recording the command of actions for forensic and law reinforcement is a less explored research field while a lot of work has been done for solving fingerprint sensor inter-operability issues. The existing sensor identification techniques can be grouped into three main categories based on : (i) hand crafted features, (ii) sensor pattern noise and (iii) colour filter.
+
+Bayrem et al. \cite{Bayram2005SourceCI} proposed a method for sensor identification based on measuring the interpolation artifacts occurred in image using color filter arrays. Lukas et al. \cite{Luks2006DigitalCI} proposed a technique in which sensor is identified by measuring the pixel non uniformity (PNU) noise of each image using wavelet based denoising. Further Barlow et al. \cite{Bartlow2009IdentifyingSF} used a variant of PNU technique known as photo response non-uniformity (PRNU) for fingerprint sensor identification. Agarwal et al. \cite{Agarwal2016FingerprintSC} used handcrafted features that includes features based on entropy, texture, image quality and statistics for sensor recognition. Recently, Sudipta et al. \cite{0e38c254baeb449390a4a998005596f7} identified sensors from NIR iris images. In their work they have reported that enhanced Sensor Pattern Noise Scheme (SPN), works better for detecting image sensor than maximum likelihood and phase based SPN methods. Uhl and Holler \cite{Uhl2012IrissensorAU} have also used P RN U , to identify NIR iris sensor from their images. \ref{table1}, summarizes the related work done in fingerprint sensor classification.
+
+
+\begin{table}[th]
+\caption{SUMMARIZED SENSOR CLASSIFICATION LITERATURE REVIEW}
+\vspace{2mm}
+\centering
+\begin{tabular}{|l|l|}
+\hline
+Author                & Significant Contribution                    \\ \hline
+Ross \& Jain \cite{Ross2004BiometricSI}  & Optical versus Solid State                  \\ \hline
+Bartlow \cite{Bartlow2009IdentifyingSF}      & Photo Response Non Uniformity               \\ \hline
+Modi \cite{modi2009statistical}         & False non match rate, minutia count         \\ \hline
+Jia \cite{Jia2012ACM}          & Cross Database(Fingerpass)                  \\ \hline
+Lungini \cite{Lugini2013InteroperabilityIF}      & Optical fingerprint sensor interoperability \\ \hline
+Agarwal \cite{Agarwal2016FingerprintSC}       & Combining handcrafted features              \\ \hline
+Debiasi \cite{Debiasi2015BlindBS}      & Multiple PRNU enhancements                  \\ \hline
+\end{tabular}
+\label{table1}
+\end{table}

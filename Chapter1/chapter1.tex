@@ -1,0 +1,50 @@
+\chapter{Introduction}
+\label{chapter1}
+With the advancement of modern technology, billions of images have been uploaded or shared online.
+Massive biometric projects (like Aadhaar) foment the
+tremendous growth in sensor technology and design. Heterogeneous sensors have been employed in voluminous projects for data acquisition in order to prevent sensor monopoly. In such cases, sensor interoperability is an issue where images from different sensors are matched using various matching algorithm. When a biometric modality is captured using different sensors, the acquired image although belonging to the same modality, differs in resolution, distortion and size.
+With such rapid growth, how to store data these data and make a fast search plays a fundamental role in machine learning
+Hashing aims to generate compact codes of a given image to project it into a hamming space. These compact codes reduces the storage overhead and help us achieve a constant or linear time complexity in searching.
+\section{Motivation}
+To search for an image containing a object or a group of similar objects is like finding a needle in a haystack. This has attracted great attention especially in the field of large scale visual search. The main objective of such algorithms is to retrieve the most relevant visual content from 
+datasets consisting of corpuses size which even exceeds the main memory capacity of a single machine, in a very accurate and efficient way.
+There are existing algorithms like the nearest neighbor search and tree-based techniques but they are only for low dimensionality data search and are 
+not scalable to higher dimensional data. These methods can be very expensive computationally and with regards to hardware requirements.
+
+In order to speed up the similarity computation and save storage space in memory hashing algorithms play a vital role. The main objective of a 
+hash function is to map each visual object into a binary feature vector, these binary feature vectors are low dimensional as compared to previous 
+high dimensional objects. This approach makes sure that the visually similar objects are mapped with the similar binary vectors.
+
+Currently two kinds of hashing methods are used in the industry: data-independent and data-dependent. In data-independent algorithms, random projections are used to map samples and then binarization is performed. For the second one, various leaning  techniques are used to learn hashing functions which are used to map our images to compact codes.
+
+In this project, I have been planning to use a deep hashing method 
+\cite{Li2018DualAD}
+to learn compact binary codes for image search which uses a deep neural network to seek multiple hierarchical non-linear transformations to learn compact binary codes. The main motives of which are:
+1) there should be minimum difference between the compact real-valued code and the learned binary vector, 2) there should be even distribution of binary codes, and 3) different bits should be independent of each other.
+
+\section{Problem Statement}
+	With the advancement of security, biometric has played a vital role in catching frauds, theft and also in cyber security.
+	Several Biometric based technologies are already been floating in the market that aims at higher level of security and can be seen being used in banks,
+	labs, houses and even vehicles nowadays are embedded with biometric security. Biometric security system have been removing the usage of passwords in various devices because they are very precise and are not easily hackable. Experiments in the field of biometric are widely performed using fingerprints, iris images, knuckles, palm-prints because they are unique for each and every person and persons identity can be easily identified using such technologies.
+	Aadhar Card nowadays have been proved to be widely accepted across the nation, over 1.171 billion as of 15 Aug 2017 aadhar cards have been issued.
+
+	Processing over all these images and estimating the identity of a person efficiently and accurately is just like finding a needle in a haystack.
+	These kinds of queries requires good and efficiently optimized algorithms which can extract the identity based on the biometric information provided by the person in a matter of seconds. Several matching algorithms exists in the market which can efficiently such problems like the nearest neighbor search.
+	But processing over such large images is a bit hefty and requires a lot of computational processing, are even time consuming and may even exceed the main memory of a single system.
+
+	For addressing the above problem, hashing can be bit savior. Hashing methods reduces the dimension of the images into low dimension and maps all the similar
+	images separately thus reducing computational processing and memory consumption. I plan on devising a hashing algorithms which can solve the problem efficiently. It should maps the images into binary vectors such that the quantizations loss is minimized. It should also be able to take care of distorted images like proper alignment, transitions. It should even index the binary vectors (obtained after hashing) properly into some kind B-tree, such that time complexity for searching an image can be reduced. 
+
+\subsection{Challenges}
+\label{sec:challenges}
+	To address the above problem following are the various challenges:
+
+\begin{itemize}
+	\item Generate Binary Vectors
+	\item Indexing
+	\item Matching
+    
+    Currently my main focus was on how to generate binary vectors which are all independent to each other, which can store information independently on different bits evenly and finally how to address the sensor inter-interoperability issue. Different sensor changes the quality of images captured by them, hence matching two images taken from different sensors is quite a hard task. First we need to know the origin of an image (the type of sensor used in capturing the image) to apply the matching algorithm on two different/similar images. 
+
+\end{itemize}
+
